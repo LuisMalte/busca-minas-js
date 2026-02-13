@@ -20,7 +20,7 @@
 
 ¡Mira el juego en acción! En este video se muestra la generación del tablero, la expansión recursiva y la interfaz de usuario.
 
-[![Gameplay Buscaminas](https://youtu.be/l22zaAyvzQ8)
+[Gameplay Buscaminas](https://youtu.be/l22zaAyvzQ8)
 
 ---
 
