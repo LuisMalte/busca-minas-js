@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Esta etiqueta es esencial para que las páginas web se muestren correctamente en dispositivos móviles--->
+   
+    <title>El buscador de Minas</title>
+    <link rel="stylesheet" href="styles.css">  <!--aqui llama al csss--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">  <!--aqui los iconos--->
+    <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.15.3/dist/sweetalert2.all.min.js "></script>  <!--es para crear alertas personalizadas esto para utilizarlo en ajustes-->    
+
+</head>
+
+ <body oncontextmenu="return false"><!-- el oncon.. es para que al hacer clic derecho no se muestre el menu del 
+    buscador--->
+   <!--HTML (Estructura)--->
+
+
+    <br>
+    <!-- para seprar --->
+
+   <span id="juego-nuevo" onclick="nuevoJuego()">     <!--span es para una linea y cambiarle sus valores div es para todo un bloque--->
+    JUEGO NUEVO
+    </span>
+    <span id="minas">    
+    000
+    </span>
+    <span id="ajustes" onclick="ajustes()">    
+        <i class="fa-solid fa-gear"></i><!--icono de gear--->
+        </span>
+
+    <span id="boton-sonido" onclick="alternarSonido()">    
+        <i id="icono-sonido" class="fa-solid fa-volume-high"></i>
+    </span>
+    <br>
+
+
+     <!--la tabla-->
+    <table cellspacing =0 cellpadding=0 id ="tablero">  <!-- spaccing quita o amuenta los epacions y el otro es el pading --->
+        <!-- <tr>
+            <td>A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>D</td>
+        </tr>
+             se crea una matriz usando  table>tr*2>td*2  que tr es rows  entonces son filas y 
+              los td son columanas  usando  
+              
+              
+              table>tr*2>td*2 se puede definir mas rapido --->
+    </table>
+
+    <script src="script.js"> </script>   <!--aqui llama mi scripts--->
+
+    
+
+</body>
+
+</html>
