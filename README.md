@@ -1,4 +1,4 @@
-# 💣 Buscaminas Clásico
+# 💣 Busca Minas-Minesweeper (Algorithmic Logic Project)
 
 > Una recreación moderna del clásico juego de estrategia, desarrollada con JavaScript Vanilla, lógica algorítmica recursiva y gestión de eventos.
 
