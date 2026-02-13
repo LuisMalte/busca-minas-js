@@ -1,4 +1,4 @@
-# 💣 Buscaminas Clásico (Minesweeper)
+# 💣 Buscaminas Clásico
 
 > Una recreación moderna del clásico juego de estrategia, desarrollada con JavaScript Vanilla, lógica algorítmica recursiva y gestión de eventos.
 
@@ -13,6 +13,14 @@
 | <img src="image.png" width="400" alt="Vista del juego limpio"> | <img src="image-1.png" width="400" alt="Menú de ajustes SweetAlert"> |
 | **Jugabilidad** | **Fin del Juego** |
 | <img src="image-2.png" width="400" alt="Jugando"> | <img src="image-3.png" width="400" alt="Perdiste"> |
+
+---
+
+## 📽️ Demostración de Gameplay
+
+¡Mira el juego en acción! En este video se muestra la generación del tablero, la expansión recursiva y la interfaz de usuario.
+
+[![Gameplay Buscaminas](https://youtu.be/l22zaAyvzQ8)
 
 ---
 
@@ -49,24 +57,23 @@ El mayor desafío fue la implementación de la función `abrirArea(c,f)`. Se uti
 Para evitar errores comunes como el *Stack Overflow* (desbordamiento de pila) o bucles infinitos, se implementó un sistema de "banderas de estado" y bloques `try-catch` para manejar los límites de la matriz (bordes del tablero).
 
 ```javascript
-/* * Fragmento de la lógica de recursividad (Flood Fill).
+/**
+ * Fragmento de la lógica de recursividad (Flood Fill).
  * Verifica las 8 celdas circundantes a la coordenada actual.
  */
-function abrirArea(c,f){
-    for (let i=-1; i<=1; i++){
-        for (let j=-1; j<=1; j++){
+function abrirArea(c, f) {
+    for (let i = -1; i <= 1; i++) {
+        for (let j = -1; j <= 1; j++) {
             try {
                 // Solo procesamos si no está descubierto ni marcado
-                if(tablero[c+i][f+j].estado != "descubierto" && tablero[c+i][f+j].estado != "marcado"){
-                    tablero[c+i][f+j].estado = "descubierto";
+                if (tablero[c + i][f + j].estado != "descubierto" && tablero[c + i][f + j].estado != "marcado") {
+                    tablero[c + i][f + j].estado = "descubierto";
                     // Si la celda adyacente también es 0, llamamos recursivamente
-                    if(tablero[c+i][f+j].valor == 0){
-                        abrirArea(c+i, f+j)
+                    if (tablero[c + i][f + j].valor == 0) {
+                        abrirArea(c + i, f + j);
                     }
                 }
-            } catch(e){
+            } catch (e) {
                 // El catch ignora los intentos de leer fuera de los límites del array
             }
         }
-    }
-}
